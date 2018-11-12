@@ -1,0 +1,32 @@
+<div class="ui teal top pointing fixed inverted menu" id="header">
+  <div class="ui container">
+      <a class="header item" href="/">
+        <img src="/static/img/EDIlogo.png" alt="">
+      </a>
+  <a class="item" href="{{ url_for('main.explore') }}">Searching in NDI </a>
+    <a class="item" href="{{ url_for('main.lucky') }}">Random searching</a>
+    <div class="item">
+        <form action="{{ url_for('main.search') }}" method="get">
+            <div class="ui search">
+                <div class="ui icon input">
+                  <i class="search icon"></i>
+                  <input type="text" placeholder="Searching" name="q" autocomplete="off">
+                </div>
+            </div>
+        </form>
+    </div>
+  <div class="right menu">
+    {% if current_user.is_authenticated %}
+      <a href="{{ url_for('main.create_entry') }}" class="item ui button">Create the content</a>
+      <a class="item" href="{{ url_for('users.profile' ) }}" id="profile">
+            {{ current_user.username }}
+        </a>
+      <a class="item" href="{{ url_for('users.logout') }}" id="logout">logout</a>
+      {% else %}
+      <a class="item" href="{{ url_for('users.register') }}" id="login">login</a>
+      <a class="item" href="#" id="what">What is the NDI?</a>
+    {% endif %}
+  </div>
+  </div>
+
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="description" content="Provide internal school evaluation and course comparison services, students can use this websites to introduce or evaluate the school’s curriculum or other aspects "c />
+  <meta name="keywords" content="pkyx,evaluate,compare,comparison,wiki,school,Edinburgh napier university"/>
+  <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<link href="http://cdn.bootcss.com/semantic-ui/2.1.6/semantic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+{% endblock %}
+<div class="ui page dimmer">
+  <div class="content">
+    <div class="center">
+            <img id="avatar-img" src="/static/img/NDI.png">
+      <br>
+        <p>NDI(Napier Dictionary Index), which is a website based on Flask, and the main function for this website is providing a platform for students to share their ideas and course evaluation.</p>
+        <p>Based on NDI, you can find our students' envaluation of the uni and courses, you can find what the best courses are in word of mouth among students, come and join us ASAP!</p>
+    </div>
+  </div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/semantic-ui/2.1.6/semantic.min.js"></script>
+<script>
+    $(function(){
+        $('.message .close').on('click', function() {
+            $(this)
+              .closest('.message')
+              .transition('fade');
+          });
+        $('#what').on('click', function(){
+          $('.dimmer').dimmer('show');
+        });
+    });
+</script>
+{% block js %}
+{% endblock %}
+</html>
