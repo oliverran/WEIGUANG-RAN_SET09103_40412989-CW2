@@ -1,32 +1,21 @@
-# pkyx
+WEIGUANG RAN 40412989 SET09103 cw2
 
-pkyx是基于Flask开发的一个比较网站，灵感来自于[VSChart](http://vschart.com)。
+NDI website(Napier dictionary index website)
 
-demo: [pkyx](http://45.78.53.13)
+How to use:
 
-[10天开发一个网站](http://tonnie17.github.io/2015/10/11/pkyx/)
+## download packages
 
-## 安装依赖
-
-`
 pip install -r requirement.txt
 `
+## Configuration file
 
-
-## 配置文件
-
-```
 app/config.py
-```
 
-## 运行
+## Run
 
-`
 gunicorn wsgi:app -c gunicorn.conf
 `
-
 or
 
-`
 python manage.py
-`
